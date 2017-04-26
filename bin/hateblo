@@ -1,9 +1,11 @@
 #! /usr/bin/env ruby
 
-file_name = "#{Time.now.strftime('%Y-%m-%d')}.md"
 
-blog_dir = '/Users/meriy100/Documents/hateblo/blogs'
-editor = ENV['EDITOR']
+
 if __FILE__ == $0
+  file_name = "#{Time.now.strftime('%Y-%m-%d')}.md"
+
+  blog_dir = '/Users/meriy100/Documents/hateblo/blogs'
+  editor = ENV['EDITOR']
   system("#{editor} #{blog_dir}/#{file_name} -c 'source /Users/meriy100/Documents/hateblo/.vimrc' ")
 end
